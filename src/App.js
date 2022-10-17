@@ -3,11 +3,19 @@ import Menu from "./components/Menu";
 import Categories from "./components/Categories";
 import items from "./data";
 
+
+
+
 function App() {
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState([]);
 
   const filterItems = (category) => {
+    if (category === "all") {
+      setMenuItems(items);
+      return;
+    }
+
     const newItems = items.filter((item) => {
       return item.category === category;
     });

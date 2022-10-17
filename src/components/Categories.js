@@ -8,10 +8,19 @@ const Categories = ({ filterItems }) => {
         onClick={() => {
           filterItems("breakfast");
         }}
-      >
-   
-        breakfast
+      > breakfast
       </button>
+
+
+      <button
+        className="filter-btn"
+        onClick={() => {
+          filterItems("all");
+        }}
+      > all
+      </button>
+
+
     </div>
   );
 };
